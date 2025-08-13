@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Demandas de TI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestão de Demandas de TI</h1>
+    </header>
+
+    <section class="form-section">
+        <h2>Nova Demanda</h2>
+        <form id="demandForm">
+            <input type="text" id="title" placeholder="Título da demanda" required>
+            <textarea id="description" placeholder="Descrição detalhada" required></textarea>
+            <select id="status">
+                <option value="Pendente">Pendente</option>
+                <option value="Em andamento">Em andamento</option>
+                <option value="Resolvido">Resolvido</option>
+            </select>
+            <button type="submit">Adicionar</button>
+        </form>
+    </section>
+
+    <section class="list-section">
+        <h2>Lista de Demandas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="demandList"></tbody>
+        </table>
+    </section>
+
+    <section class="report-section">
+        <h2>Relatório</h2>
+        <p>Total de demandas: <span id="totalCount">0</span></p>
+        <p>Pendentes: <span id="pendingCount">0</span></p>
+        <p>Em andamento: <span id="progressCount">0</span></p>
+        <p>Resolvidas: <span id="resolvedCount">0</span></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
